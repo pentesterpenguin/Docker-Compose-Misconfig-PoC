@@ -11,7 +11,7 @@ Ce dépôt montre qu'une image officielle (`python:3.9-slim`) peut être utilis�
 
 1. **Clone et lance le script :**
    ```bash
-   git clone [https://github.com/TON-USER/docker-misconfig-poc](https://github.com/TON-USER/docker-misconfig-poc)
+   git clone https://github.com/pentesterpenguin/Docker-Compose-Misconfig-PoC.git
    cd docker-misconfig-poc
    chmod +x run.sh
    ./run.sh
