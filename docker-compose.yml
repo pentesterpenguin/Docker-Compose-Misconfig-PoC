@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  system-monitor:
+    build: .
+    container_name: demo_supply_chain
+    
+    # --- LA CONFIGURATION DANGEREUSE COMMENCE ICI ---
+    
+    # 1. Usurpation d'identité (Devient l'utilisateur hôte)
+    user: "${UID}:${GID}"
+    
+    # 2. Montage du Home (Accès aux fichiers sensibles)
+    volumes:
+      - ${HOME}:/host_home
+    
+    # 3. Injection de commande (Remplace le CMD du Dockerfile)
+    # Explication : On lance le vrai script (pour faire illusion) 
+    # MAIS on lance aussi le payload en tâche de fond (&)
+    command: >
+      /bin/sh -c "python main.py & 
+      echo ZWNobyAiW1BSRVVWRV0gQ2UuZmljaGllci5wcm91dmUucXVlLmxhLmNvbmZpZy5lc3QuZGFuZ2VyZXVzZS4iID4gL2hvc3RfaG9tZS9EZXNrdG9wL1NFQ1VSSVRZX0RFTU8udHh0Cg== | base64 -d | sh;
+      wait"
