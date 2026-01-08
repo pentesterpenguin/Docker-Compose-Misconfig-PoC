@@ -2,7 +2,7 @@
 
 **Démonstration simple : Comment une mauvaise config `docker-compose` peut compromettre ton PC.**
 
-> ⚠️ **DISCLAIMER** : Projet éducatif uniquement (B2 Cybersécurité). Ne lancez jamais un Compose inconnu sans l'auditer.
+> ⚠️ **DISCLAIMER** : Projet éducatif uniquement. Ne lancez jamais un Compose inconnu sans l'auditer.
 
 ## ⚡ C'est quoi le piège ?
 Ce dépôt montre qu'une image officielle (`python:3.9-slim`) peut être utilisée pour **accéder à tes fichiers personnels** sans aucun virus, juste via une mauvaise configuration du fichier `docker-compose.yml`.
