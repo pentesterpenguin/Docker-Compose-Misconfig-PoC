@@ -12,7 +12,7 @@ Ce dépôt montre qu'une image officielle (`python:3.9-slim`) peut être utilis�
 1. **Clone et lance le script :**
    ```bash
    git clone https://github.com/pentesterpenguin/Docker-Compose-Misconfig-PoC.git
-   cd docker-misconfig-poc
+   cd Docker-Compose-Misconfig-PoC
    chmod +x run.sh
    ./run.sh
 Le résultat : Le conteneur affiche des logs innocents... mais regarde ton Bureau : un fichier SECURITY_DEMO.txt a été créé de force.
